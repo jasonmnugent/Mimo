@@ -1,21 +1,18 @@
-# use your knowledge of returning values to write a function that converts a set of numbers to morse code
+# create a simple calculator that can add, subtract, and multiply number
+# create a function that takes two numbers and an operator as its parameters
+def calculator(num_1, num_2, op):
+    result = 0
 
-def convert_to_morse(code):
-    code = code.replace("1", ".----")
-    code = code.replace("2", "..---")
-    code = code.replace("3", "...--")
-    code = code.replace("4", "....-")
-    code = code.replace("5", ".....")
-    code = code.replace("6", "-....")
-    code = code.replace("7", "--...")
-    code = code.replace("8", "---..")
-    code = code.replace("9", "----.")
-    code = code.replace("0", "-----")
-    return code
+    if op == "+":
+        result = num_1 + num_2
 
-lock_code = "1 2 2 5 0"
-print(f"Initial code: {lock_code}")
+    elif op == "-":
+        result = num_1 - num_2
+    
+    elif op == "*":
+        result = num_1 * num_2
+    
+    print(f"{num_1} {op} {num_2} = {result}")
 
-morse = convert_to_morse(lock_code)
-print(f"Morse code: {morse}")
+calculator(5, 10, "*")
 
